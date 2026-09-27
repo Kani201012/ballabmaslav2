@@ -682,6 +682,218 @@ footer a:hover { color: var(--gold); transform: translateX(3px); }
     .footer-grid { grid-template-columns: 1fr; }
     .store-controls { flex-direction: column; align-items: stretch; }
 }
+
+  /* ===================================================
+   MOBILE COMPATIBILITY & APP-LIKE POLISH (2026 ENGINE)
+   =================================================== */
+
+/* 1. Prevent Horizontal Page Wobble */
+html, body {
+    overflow-x: clip;
+    max-width: 100vw;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 2. Fix iOS Safari Auto-Zoom on Input Focus */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        font-size: 16px !important; /* Disables unwanted iOS zoom */
+    }
+}
+
+/* 3. Mobile Layout Scaling & Fluid Typography */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.2rem;
+    }
+    
+    /* Hero Section Responsive */
+    .hero {
+        padding: 2.5rem 0 3.5rem 0;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .hero-text-col {
+        text-align: left;
+    }
+    .hero h1 {
+        font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+        line-height: 1.35;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.6rem;
+    }
+    .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+    .hero-cta-group .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.95rem 1.4rem;
+        font-size: 1.05rem;
+    }
+    
+    /* Hero Image Aspect Ratio Fix */
+    .hero-image-frame {
+        height: auto;
+        aspect-ratio: 4 / 3;
+        border-radius: 20px;
+    }
+    .floating-seal {
+        bottom: 10px;
+        left: 10px;
+        padding: 0.8rem 1.2rem;
+        border-radius: 14px;
+    }
+    .floating-seal strong {
+        font-size: 1.5rem;
+    }
+    .floating-seal span {
+        font-size: 0.8rem;
+    }
+    
+    /* 3-Tier Chilli & Feature Cards */
+    .spectrum-grid,
+    .grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1.4rem;
+    }
+    .heat-card,
+    .pillar-card {
+        padding: 1.5rem;
+    }
+    
+    /* Store Controls & Search */
+    .store-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .filter-pills {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 6px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    .filter-pill {
+        flex-shrink: 0;
+        padding: 0.55rem 1.2rem;
+        font-size: 0.92rem;
+    }
+    .search-input-box {
+        width: 100%;
+    }
+    .search-input-box input {
+        width: 100%;
+    }
+    
+    /* Product Card Mobile Spacing */
+    .product-img-box {
+        height: 220px;
+    }
+    .product-actions {
+        gap: 0.5rem;
+    }
+    .product-actions .btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* 4. Full-Screen Smooth Cart Drawer on Mobile */
+    #cart-drawer {
+        width: 100% !important;
+        max-width: 100% !important;
+        right: -100%;
+        padding: 1.5rem 1.2rem;
+        /* iOS Safe Area Padding */
+        padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 20px));
+    }
+    .cart-drawer-item {
+        padding: 0.85rem 0;
+    }
+    .item-controls {
+        gap: 12px;
+        padding: 4px 12px;
+    }
+    .item-btn {
+        min-width: 36px;
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+
+    /* 5. Mobile Navigation Overlay */
+    nav#main-navbar .nav-links {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100vw;
+        height: calc(100dvh - 75px);
+        background: var(--card-bg);
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        gap: 1.4rem;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        overflow-y: auto;
+    }
+    nav#main-navbar .nav-links.active {
+        left: 0;
+    }
+    nav#main-navbar .nav-links a {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+    nav#main-navbar .nav-links .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    /* 6. Floating Action Buttons (Thumb Zone Layout) */
+    /* Prevents overlapping between WhatsApp, Cart, and Theme buttons */
+    #wa-widget {
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 18px !important;
+        width: 52px !important;
+        height: 52px !important;
+    }
+    #cart-trigger-btn {
+        bottom: calc(82px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 18px !important;
+        padding: 11px 18px !important;
+        font-size: 0.88rem !important;
+    }
+    #theme-toggle {
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+        left: 18px !important;
+        width: 44px !important;
+        height: 44px !important;
+    }
+    
+    /* Footer Safe Space for Floating Buttons */
+    footer {
+        padding-bottom: calc(5rem + env(safe-area-inset-bottom, 20px)) !important;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+}
 </style>
 </head>
 <body>
@@ -1265,6 +1477,41 @@ window.addEventListener('DOMContentLoaded', () => {
     fetchInventory();
     updateCartUI();
 });
+
+  // Background Scroll-Lock for Mobile Menus
+function lockScroll(enable) {
+    if (enable) {
+        document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none';
+    } else {
+        document.body.style.overflow = '';
+        document.body.style.touchAction = '';
+    }
+}
+
+// Update your toggle functions to include scroll locking:
+const originalToggleNav = toggleMobileNav;
+toggleMobileNav = function() {
+    const nav = document.querySelector('.nav-links');
+    const willOpen = !nav.classList.contains('active');
+    nav.classList.toggle('active');
+    lockScroll(willOpen);
+};
+
+const originalCloseNav = closeNav;
+closeNav = function() {
+    document.querySelector('.nav-links').classList.remove('active');
+    lockScroll(false);
+};
+
+const originalToggleCart = toggleCartDrawer;
+toggleCartDrawer = function() {
+    const drawer = document.getElementById('cart-drawer');
+    const willOpen = !drawer.classList.contains('active');
+    drawer.classList.toggle('active');
+    document.getElementById('cart-drawer-overlay').classList.toggle('active');
+    lockScroll(willOpen);
+};
 </script>
 </body>
 </html>
