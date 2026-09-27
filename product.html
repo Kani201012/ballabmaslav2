@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মশলার বিবরণ | বল্লভ মশলা</title>
+<meta name="description" content="বল্লভ মশলার পাথরের জাঁতায় পেষা মশলার স্পেসিফিকেশন, গুণমান ও রান্নার ব্যবহারবিধি দেখুন এবং সরাসরি হোয়াটসঅ্যাপে তাজা পাউচ অর্ডার করুন।">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#991b1b">
+
+<!-- গুগল ফন্টস -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700;800&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #991b1b;
+    --gold: #df9b26;
+    --bg: #fdfbf7;
+    --card-bg: #ffffff;
+    --text-heading: #1c1917;
+    --text-body: #44403c;
+    --border-color: rgba(223, 155, 38, 0.2);
+    --font-display: 'Noto Serif Bengali', 'Cinzel', serif;
+    --font-sans: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text-body); font-family: var(--font-sans); line-height: 1.8; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+nav { background: var(--card-bg); border-bottom: 1px solid var(--border-color); padding: 1.2rem 0; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text-body); font-weight: 600; margin-left: 2rem; font-size: 1.05rem; }
+.nav-links a:hover { color: var(--primary); }
+
+.product-detail-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 3rem 0 6rem 0; align-items: start;
+}
+.media-column { position: sticky; top: 100px; }
+.main-img-box {
+    width: 100%; height: 480px; border-radius: 24px; overflow: hidden;
+    border: 1px solid var(--border-color); box-shadow: 0 15px 40px rgba(0,0,0,0.08); background: #fff;
+}
+.main-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.thumb-strip { display: flex; gap: 12px; margin-top: 15px; overflow-x: auto; padding-bottom: 5px; }
+.thumb-img {
+    width: 75px; height: 75px; border-radius: 12px; object-fit: cover; cursor: pointer;
+    border: 2px solid transparent; opacity: 0.7; transition: 0.25s;
+}
+.thumb-img:hover, .thumb-img.active { opacity: 1; border-color: var(--gold); }
+
+.details-column h1 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 0.8rem; color: var(--text-heading); }
+.price-pill {
+    display: inline-block; background: rgba(223, 155, 38, 0.15); color: #92400e;
+    font-size: 1.6rem; font-weight: 800; padding: 0.3rem 1.4rem; border-radius: 50px; margin-bottom: 1.5rem;
+}
+.specs-body { font-size: 1.05rem; line-height: 1.85; margin-bottom: 2.5rem; color: var(--text-body); }
+
+.cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.btn-buy {
+    background: var(--primary); color: #fff; padding: 1rem 2.5rem; border-radius: 50px;
+    font-weight: 700; text-decoration: none; border: none; cursor: pointer; font-size: 1.05rem;
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.3); transition: 0.3s; font-family: var(--font-sans);
+}
+.btn-buy:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.btn-wa {
+    background: #25D366; color: #fff; padding: 1rem 2rem; border-radius: 50px;
+    font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans);
+}
+
+.badge-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+    border-top: 1px solid var(--border-color); padding-top: 2rem; margin-top: 2rem;
+}
+.badge-card {
+    background: var(--card-bg); border: 1px solid var(--border-color); padding: 1rem; border-radius: 12px; text-align: center; font-size: 0.95rem; font-weight: 600;
+}
+
+footer { background: #0d0b0a; color: #a8a29e; padding: 3rem 0; text-align: center; }
+footer a { color: var(--gold); text-decoration: none; }
+
+@media(max-width: 860px) {
+    .product-detail-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .media-column { position: relative; top: 0; }
+    .main-img-box { height: 360px; }
+}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-flex">
+        <a href="index.html" style="text-decoration:none; font-family:var(--font-display); font-size:1.6rem; font-weight:800; color:var(--primary);">
+            বল্লভ মশলা
+        </a>
+        <div class="nav-links">
+            <a href="index.html">মূল পাতা</a>
+            <a href="index.html#inventory">মশলার ভাণ্ডার</a>
+            <a href="about.html">আমাদের ঐতিহ্য</a>
+            <a href="contact.html">যোগাযোগ</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div style="padding-top: 2rem;">
+        <a href="index.html#inventory" style="text-decoration:none; color:var(--primary); font-weight:700; font-size:1rem;">← মশলার ভাণ্ডারে ফিরে যান</a>
+    </div>
+
+    <div id="product-target" class="product-detail-layout">
+        <div style="grid-column: 1/-1; text-align:center; padding: 5rem 0; font-size:1.2rem; color:var(--gold); font-weight:700;">
+            গুগল শিট থেকে মশলার বিস্তারিত বিবরণ লোড হচ্ছে...
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; ২০২৬ বল্লভ মশলা • ১০০% খাঁটি সনাতন পাথরের জাঁতায় পেষা মশলা</p>
+        <p style="margin-top:8px;"><a href="index.html">মূল পাতায় ফিরুন</a> | <a href="contact.html">যোগাযোগ করুন</a></p>
+    </div>
+</footer>
+
+<script>
+function parseCSVLine(str) { 
+    const res = []; let cur = ''; let inQuote = false; 
+    for (let i = 0; i < str.length; i++) { 
+        const c = str[i]; 
+        if (c === '"') { 
+            if (inQuote && str[i+1] === '"') { cur += '"'; i++; } 
+            else { inQuote = !inQuote; } 
+        } else if (c === ',' && !inQuote) { 
+            res.push(cur.trim()); cur = ''; 
+        } else { cur += c; } 
+    } 
+    res.push(cur.trim()); return res; 
+}
+
+async function loadItem() {
+    const params = new URLSearchParams(window.location.search);
+    const targetName = decodeURIComponent(params.get('item') || '').trim();
+    const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTs32OYdkg_YQUk4zAR_VmMn0BxJHgVYHgfZnFiK0L1PT0w16pW9VhtHRSp9bKUGnkfm2U4kof_iMGm/pub?output=csv';
+    
+    let product = null;
+
+    try {
+        const res = await fetch(`${CSV_URL}&_nocache=${Date.now()}`);
+        const txt = await res.text();
+        const lines = txt.split(/\r\n|\n/);
+        for(let i = 1; i < lines.length; i++) {
+            if (!lines[i].trim()) continue;
+            const c = parseCSVLine(lines[i]);
+            if(c[0] && (c[0].trim().toLowerCase() === targetName.toLowerCase() || (!targetName && i === 1))) {
+                let imgs = c[3] ? c[3].split('|').map(s => s.trim()) : [];
+                product = {
+                    name: c[0],
+                    price: c[1],
+                    desc: c[2] || 'খাঁটি সনাতন পদ্ধতিতে প্রস্তুত বল্লভ মশলা।',
+                    images: imgs.length > 0 ? imgs : ['https://cdn.shopaccino.com/refresh/articles/shutterstock1503700925-670186_l.jpg?v=681']
+                };
+                break;
+            }
+        }
+    } catch(e) { 
+        console.error("গুগল শিট লোডিং ত্রুটি:", e); 
+    }
+
+    if(!product) {
+        product = {
+            name: targetName || "আসাম স্পেশাল লঙ্কা গুঁড়ো",
+            price: "₹১২০ / ২০০ গ্রাম",
+            desc: "আসামের উৎকৃষ্ট সূর্য-শুকনো লঙ্কা থেকে সনাতন শীতল পাথরের জাঁতায় তৈরি। তরকারিতে আনে অপূর্ব প্রাকৃতিক লাল রঙ এবং মিষ্টি-ঝাল মৃদু ঝাঁঝ। কোনো কৃত্রিম রঙ, ক্ষতিকারক কেমিক্যাল বা ভেজাল ভুষি মুক্ত।",
+            images: [
+                'https://cdn.shopaccino.com/refresh/articles/shutterstock1503700925-670186_l.jpg?v=681',
+                'https://micdp.coops4dev.coop/sites/default/files/styles/max_1440/public/2022-11/Frontier.jpg?itok=3bOzpRb3'
+            ]
+        };
+    }
+
+    renderDetail(product);
+}
+
+function renderDetail(p) {
+    document.title = `${p.name} | বল্লভ মশলা`;
+    const target = document.getElementById('product-target');
+
+    const thumbs = p.images.map((img, i) => `
+        <img src="${img}" class="thumb-img ${i === 0 ? 'active' : ''}" onclick="changeImg('${img}', this)" alt="${p.name}">
+    `).join('');
+
+    target.innerHTML = `
+        <div class="media-column">
+            <div class="main-img-box">
+                <img id="main-product-img" src="${p.images[0]}" alt="${p.name}">
+            </div>
+            <div class="thumb-strip">${thumbs}</div>
+        </div>
+
+        <div class="details-column">
+            <div style="text-transform:uppercase; color:var(--gold); font-weight:800; font-size:0.9rem; letter-spacing:0.05em; margin-bottom:8px;">
+                ১০০% পাথরের জাঁতায় পেষা খাঁটি
+            </div>
+            <h1>${p.name}</h1>
+            <div class="price-pill">${p.price}</div>
+
+            <div class="specs-body">
+                <p>${p.desc}</p>
+                <p style="margin-top:1.2rem; font-weight:600; color:var(--text-heading); line-height:2;">
+                    ✓ সনাতন শীতল জাঁতায় পেষা, যাতে প্রাকৃতিক সুগন্ধি তেল অটুট থাকে।<br>
+                    ✓ কোনো কৃত্রিম রঙ বা কেমিক্যাল মেশানো নেই (সুদান ডাই মুক্ত)।<br>
+                    ✓ বহুস্তরীয় সুগন্ধ-রোধী এয়ারটাইট ফয়েল প্যাকেটে সুরক্ষিত।
+                </p>
+            </div>
+
+            <div class="cta-actions">
+                <button onclick="instantBuy('${p.name.replace(/'/g, "\\'")}', '${p.price}')" class="btn-buy">
+                    💬 হোয়াটসঅ্যাপে সরাসরি অর্ডার দিন
+                </button>
+                <a href="https://wa.me/919734239509?text=নমস্কার%20বল্লভ%20মশলা,%20আমি%20${encodeURIComponent(p.name)}%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn-wa">
+                    প্রশ্ন বা জিজ্ঞাসা করুন
+                </a>
+            </div>
+
+            <div class="badge-grid">
+                <div class="badge-card">🌱 ১০০% প্রাকৃতিক</div>
+                <div class="badge-card">🛡️ প্রিজারভেটিভ মুক্ত</div>
+                <div class="badge-card">🚚 সমগ্র বাংলায় ডেলিভারি</div>
+            </div>
+        </div>
+    `;
+}
+
+function changeImg(src, el) {
+    document.getElementById('main-product-img').src = src;
+    document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+}
+
+function instantBuy(name, price) {
+    const msg = `*সরাসরি মশলা অর্ডার - বল্লভ মশলা*%0A• পণ্যের নাম: ${encodeURIComponent(name)}%0A• মূল্য: ${encodeURIComponent(price)}%0A%0Aঅনুগ্রহ করে পেমেন্টের উপায় এবং প্রেরণের আনুমানিক সময় জানান।`;
+    window.open(`https://wa.me/919734239509?text=${msg}`, '_blank');
+}
+
+window.addEventListener('DOMContentLoaded', loadItem);
+</script>
+</body>
+</html>
