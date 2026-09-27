@@ -1,0 +1,17 @@
+{
+"name": "Ballab Masala - 100% Pure Spices",
+"short_name": "Ballab Masala",
+"start_url": "./index.html",
+"display": "standalone",
+"background_color": "#fdfbf7",
+"theme_color": "#991b1b",
+"description": "Authentic stone-ground Indian spices. Curcumin-rich Turmeric, roasted Cumin, and 3-Tier Chilli Collection.",
+"icons": [
+{
+"src": "https://cdn.shopaccino.com/refresh/articles/shutterstock1503700925-670186_l.jpg?v=681",
+"sizes": "512x512",
+"type": "image/jpeg",
+"purpose": "any maskable"
+}
+]
+}
