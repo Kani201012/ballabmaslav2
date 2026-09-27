@@ -705,6 +705,84 @@ html, body {
     }
 }
 
+  /* ========================================================
+   REDUCE SECTION-TO-SECTION GAPS ON MOBILE (PHONES & TABLETS)
+   ======================================================== */
+@media (max-width: 768px) {
+    /* 1. Tighten all section paddings from 6rem (96px) down to 2rem - 2.5rem (32px - 40px) */
+    .hero {
+        padding: 2rem 0 2rem 0 !important;
+    }
+
+    .heat-spectrum-section,
+    .features-section,
+    .store-section,
+    .about-section,
+    .faq-section,
+    section {
+        padding: 2.5rem 0 !important; /* Replaces 5rem - 6rem padding */
+    }
+
+    /* 2. Remove extra top margins between stacked sections */
+    .heat-spectrum-section {
+        margin-top: 0 !important;
+    }
+
+    /* 3. Reduce heading bottom margins from 3.5rem - 4rem down to 1.5rem */
+    .section-title {
+        margin-bottom: 1.8rem !important;
+    }
+    
+    .section-title h2 {
+        margin-bottom: 0.3rem !important;
+    }
+
+    .section-title p {
+        font-size: 0.98rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* 4. Reduce large margins below paragraphs & cards */
+    p {
+        margin-bottom: 1rem !important;
+    }
+
+    .spectrum-grid,
+    .grid-3 {
+        margin-top: 1.2rem !important;
+        gap: 1.2rem !important;
+    }
+
+    /* 5. Tighter footer padding */
+    footer {
+        padding: 3rem 0 2rem 0 !important;
+    }
+    .footer-grid {
+        margin-bottom: 2rem !important;
+        gap: 1.8rem !important;
+    }
+}
+
+/* Extra compact spacing for smaller phones (under 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 1.8rem 0 1.8rem 0 !important;
+    }
+
+    .heat-spectrum-section,
+    .features-section,
+    .store-section,
+    .about-section,
+    .faq-section,
+    section {
+        padding: 2rem 0 !important;
+    }
+
+    .section-title {
+        margin-bottom: 1.4rem !important;
+    }
+}
+
 /* 3. Mobile Layout Scaling & Fluid Typography */
 @media (max-width: 768px) {
     .container {
